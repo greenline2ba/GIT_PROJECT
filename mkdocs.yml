@@ -1,2 +1,9 @@
-site_name: My Docs
+site_name: My MKDocs Material Documentation
+theme:
+  name: material
+  palette: 
+    scheme: slate
+    primary: green
+    accent: indigo
+  
 
