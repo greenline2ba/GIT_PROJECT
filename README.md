@@ -15,7 +15,7 @@ Základný obsah:
 * [Štruktúra projektu a technické detaily](#-štruktúra-projektu-a-technické-detaily)
 
 ## Popis funkcionality: 
-Používateľ zadá vstupy prostredníctvom metódy Input, systém prostredníctvom funkcie vypočíta výstup - cieľovú sumu na konci sporenia. 
+Používateľ môže zadať vstupy prostredníctvom metódy Input. Systém prostredníctvom funkcie vypočíta výstup - cieľovú sumu na konci sporenia a zobrazí graf s vývojom investície.  
 
 > **POZOR:** Tento skript neberie do úvahy infláciu ani dane. Všetky výpočty sú len odhady.
 
@@ -25,10 +25,10 @@ Používateľ zadá vstupy prostredníctvom metódy Input, systém prostredníct
 
 | Parameter | Popis | Typ Dát |
 | :--- | :--- | :--- |
-| `--počiatočný_vklad` | Počiatočná jednorázová suma investície. | Float |
-| `--mesačný_vklad` | Mesačná pravidelná suma investície. | Float |
-| `--počet_rokov` | Doba sporenia v celých rokoch. | Integer |
-| `--uroková sadzba_ročne` | Ročná úroková sadzba v percentách (napr. 5.5). | Float |
+| `--jednorazovy_vklad` | Počiatočná jednorázová suma investície. | Float |
+| `--pravidelny_vklad` | Mesačná pravidelná suma investície. | Float |
+| `--pocet_rokov` | Doba sporenia v celých rokoch. | Integer |
+| `--uroková sadzba_rocne` | Ročná úroková sadzba v percentách (napr. 5.5). | Float |
 
 
 ## ⚙️ Výstup: 
@@ -43,18 +43,18 @@ Zadajte počiatočný vklad: 1000 eur,
 Zadajte ročnú úrokovú sadzbu (%): 5, 
 Zadajte počet rokov: 10
 
->>> Výsledok: Vaša budúca hodnota po 10 rokoch bude: 1628.89
+>>> Výsledok: Vaša budúca hodnota po 10 rokoch bude: 1647,01 EUR
 
 
 ### Scenár 2 - Pravidelné sporenie:
  
-(Napr. pravidelný mesačný vklad 50 eur, 5% úrok, úrok, 10 rokov).
+(Napr. pravidelný mesačný vklad 50 eur, 5% úrok, 10 rokov).
 
 Zadajte pravidelný mesačný vklad: 50 eur,
 Zadajte ročnú úrokovú sadzbu (%): 5,
 Zadajte počet rokov: 10
 
->>> Výsledok: Vaša budúca hodnota po 10 rokoch bude: ....xxx
+>>> Výsledok: Vaša budúca hodnota po 10 rokoch bude: 7764,11 EUR
 
 ### Scenár 3 - Pravidelné sporenie s počiatočným vkladom:
 
@@ -65,13 +65,16 @@ Zadajte pravidelný mesačný vklad: 50 eur,
 Zadajte ročnú úrokovú sadzbu (%): 5
 Zadajte počet rokov: 10
 
->>> Výsledok: Vaša budúca hodnota po 10 rokoch bude: ....xxx
+>>> Výsledok: Vaša budúca hodnota po 10 rokoch bude: 9411,12 EUR
 
 ## 💻 Štruktúra Projektu a Technické Detaily
 
 **Použité moduly/knižnice**:
 
-doplniť
+plotly.graph_objects as go
+pandas as pd
+from datetime import date, timedelta
+plotly.io as pio
 
 **Matematické vzorce**:
 
