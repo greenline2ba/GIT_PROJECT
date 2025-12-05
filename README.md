@@ -71,10 +71,20 @@ Zadajte počet rokov: 10
 
 **Použité moduly/knižnice**:
 
-plotly.graph_objects as go
+math as math 
+
+numpy as np
+
 pandas as pd
+
+plotly.express as px
+
+plotly.graph_objects as go
+
 from datetime import date, timedelta
+
 plotly.io as pio
+
 
 **Matematické vzorce**:
 
