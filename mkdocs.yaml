@@ -1,9 +1,10 @@
 site_name: My MKDocs Material Documentation
+site_url: https://example.com
 theme:
   name: material
   palette: 
     scheme: slate
-    primary: green
+    primary: red
     accent: indigo
   
 
