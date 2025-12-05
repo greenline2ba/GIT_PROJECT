@@ -6,5 +6,11 @@ theme:
     scheme: slate
     primary: red
     accent: indigo
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      options:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
   
 
